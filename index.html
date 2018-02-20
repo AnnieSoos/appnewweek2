@@ -18,7 +18,7 @@
     #canvas {
       border: 1px dashed #000;
       padding: 10px;
-      font: 16px/18px "times new roman", times, serif;
+      font: 56px/66px "times new roman", times, serif;
     }
     #controls {
       display: -webkit-flex;
@@ -64,6 +64,13 @@
         <p>Padding: <input id="textpadding" type="text" name="textpadding" value="10" size="5"></p>
 
       </div>
+      <div class="control">
+        <h2>Extras</h2>
+        <p>Canva text size: <input id="padding" type="text" name="padding" value="16" size="5"></p>
+        <p>Line height: <input id="lineheight" type="text" name="lineheight" value="18" size="5"></p>
+        <p>Padding: <input id="textpadding" type="text" name="textpadding" value="10" size="5"></p>
+
+      </div>
     </div>
     </form>
 
@@ -77,11 +84,19 @@ $(document).ready(function() {
  $('input[type=radio][name=fontname]').change(function(e) {
  console.log(e.target.value);
  $('#canvas').css('font-family', e.target.value);
- })
+});
  $('#textcolor').change(function(e) {
  console.log(e.target.value);
  $('#canvas').css('color', e.target.value);
  });
+ $('#bgcolor').change(function(e) {
+ console.log(e.target.value);
+ $('#canvas').css('color', e.target.value);
+});
+ $('#padding').change(function(e) {
+ console.log(e.target.value);
+ $('#canvas').css('padding', e.target.value);
+});
 });
 
 </script>
