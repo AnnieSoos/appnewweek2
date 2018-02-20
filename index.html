@@ -74,8 +74,16 @@
   </div>
 <script>
 $(document).ready(function() {
-  // Code here will run when the page has loaded.
+ $('input[type=radio][name=fontname]').change(function(e) {
+ console.log(e.target.value);
+ $('#canvas').css('font-family', e.target.value);
+ })
+ $('#textcolor').change(function(e) {
+ console.log(e.target.value);
+ $('#canvas').css('color', e.target.value);
+ });
 });
+
 </script>
 </body>
 </html>
